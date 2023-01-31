@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slam Book</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/b0f29e9bfe.js" crossorigin="anonymous"></script>
+    <script defer src="./main.js"></script>
+</head>
+<body>   
+    <button id="prev-btn">
+        <i class="fas fa-arrow-circle-left"></i>
+    </button>
+    <!-- The Book -->
+    <div id="book" class="book">
+        <!-- Paper 1 -->
+        <div id="p1" class="paper">
+            <div class="front">
+                <div id="f1" class="front-content">
+                    <h1 class="book-title"> Slam book </h1>
+                    <img class="cover-img" src="./book.png" alt="Slam Book">
+                </div>
+            </div>
+            <div class="back">
+                <div id="b1" class="back-content">                    
+                    <section id="questions">
+                            <label for="name"> Name and surname: </label><input type="text" name="names" id="name" />
+                            <label for="birth">Date of birth/ Time:</label><input type="datetime-local" name="birth" id="birth" />
+                            <label for="sex">Sex:</label>
+                            <select name="sex" id="sex">
+                                <option value="man">Man</option>
+                                <option value="woman">Woman</option>
+                            </select>                           
+                            <label for="phone"> Phone number: </label><input type="tel" name="phone" id="phone" />
+                            <label for="photo">Upload your profile picture:</label><input type="file" name="photo" id="photo" />                            
+                            <label for="color"> Favorite color: </label><input type="color" name="color" id="color" />         
+                    </section>
+                </div>
+            </div>
+        </div>
+        <!-- Paper 2 -->
+        <div id="p2" class="paper">
+            <div class="front">
+                <div id="f2" class="front-content">                   
+                    <section id="questions">                          
+                            <label for="hour"> Time you wake up: </label><input type="time" name="hour" id="hour" />
+                            <label>Door /House Number /Land Mark:</label><input type="text" name="doornumber" id="doornumber" />                            
+                            <label>City / Town / Village Name:</label><input type="text" name="townname" id="townname" />
+                            <label>Zodiac / Astro Sign:</label><input type="text" name="zodiacsign" id="zodiacsign" />
+                            <label for="number">Favorite number:</label><input type="number" name="number" id="number"/>                           
+                    </section>
+                </div>
+            </div>
+            <div class="back">
+                <div id="b2" class="back-content">                   
+                    <section id="questions">
+                        <label>Things you like mostly:</label><input type="text" name="thingsyoulikemostly" id="thingsyoulikemostly" />
+                        <label>Dislike things:</label><input type="text" name="dislikethingst" id="dislikethingst" />
+                        <label>Funniest moment in your life:</label><input type="text" name="funniestmoment" id="funniestmoment" />
+                        <label>Goal:</label><input type="text" name="goal" id="goal" />
+                        <label>Suggestions to me:</label><input type="text" name="suggestionstome" id="suggestionstome" />
+                    </section>
+                </div>
+            </div>
+        </div>
+        <!-- Paper 3 -->
+        <div id="p3" class="paper">
+            <div class="front">
+                <div id="f3" class="front-content">
+                   <img class="cover-img" src="./1.webp" alt="Slam Book">
+                </div>
+            </div>
+            <div class="back">
+                <div id="b3" class="back-content">                    
+                    <section id="questions">
+                        <label>I swear all my answers are true.</label><input type="checkbox" name="confirmation">
+                        <label>I accept that any other user see my answers.</label><input type="checkbox" name="confirmation">                                                  
+                    </section>
+                    <input class="buttons buttons1" type="button" id="bt" value="Save data to file" onclick="saveFile()" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <button id="next-btn">
+        <i class="fas fa-arrow-circle-right"></i>
+    </button>
+</body>
+</html>
